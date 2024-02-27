@@ -34,9 +34,11 @@ class ShowPosts extends Component
     }
 
     // Delete action
-    public function delete($id): void
+    public function delete(User $user): void
     {
-        $this->warning("Will delete #$id", 'It is fake.', position: 'toast-bottom');
+        $id = $user->id;
+        $user->delete();
+        $this->success("Usuario con ID #$id", ' Eliminado con éxito.', position: 'toast-bottom');
     }
 
     // Table headers

@@ -17,7 +17,7 @@
             @scope('actions', $user)
                 <div class="flex space-x-1">
                     <x-button icon="o-pencil-square" wire:click="edit({{ $user['id'] }})" class="btn-ghost btn-sm text-blue-500"/>
-                    <x-button icon="o-trash" wire:click="delete({{ $user['id'] }})" wire:confirm="Are you sure?" spinner class="btn-ghost btn-sm text-red-500"/>
+                    <x-button icon="o-trash" wire:click="delete({{ $user['id'] }})" wire:confirm="Estas seguro?" spinner class="btn-ghost btn-sm text-red-500"/>
                 </div>
             @endscope
         </x-table>
