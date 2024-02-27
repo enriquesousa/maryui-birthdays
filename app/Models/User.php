@@ -3,11 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Carbon;
 
 class User extends Model
 {
@@ -21,13 +24,18 @@ class User extends Model
         'name',
         'email',
         'dob',
-        'password',
     ];
 
 
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
         'dob' => 'date',
     ];
+
+
+    public function age()
+    {
+        return Carbon::parse($this->dob)->diffInYears();
+    }
+
+
 }
