@@ -1,0 +1,14 @@
+{
+	"files": [
+		{
+			"path": "package.json",
+			"bookmarks": [
+				{
+					"line": 6,
+					"column": 37,
+					"label": "\"watch\": \"vite build --watch\""
+				}
+			]
+		}
+	]
+}
