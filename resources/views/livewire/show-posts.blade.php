@@ -15,9 +15,19 @@
     <x-card>
         <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy">
 
-            @scope('cell_age', $user)
-                {{ $user->dob->age }}
+            @scope('cell_nacimiento', $user)
+                {{ $user->dob->format('d/m/Y') }}
             @endscope
+
+
+            @scope('cell_edad', $user)
+                {{ $user->edad() }}
+            @endscope
+
+            @scope('cell_proximo', $user)
+                {{ $user->proximo() }}
+            @endscope
+
 
             @scope('actions', $user)
                 <div class="flex space-x-1">

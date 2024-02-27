@@ -32,10 +32,34 @@ class User extends Model
     ];
 
 
-    public function age()
+    // Edad
+    public function edad()
     {
-        return Carbon::parse($this->dob)->diffInYears();
+        $edad = Carbon::parse($this->dob)->diffInYears();
+        return $edad;
     }
+
+    // Proximo Cumpleaños
+    public function proximo()
+    {
+        // $date = Carbon::parse($this->dob);
+        // $month = $date->month;
+        // $mes = Carbon::parse($date)->locale('es')->isoFormat('MMM');
+        // $day = $date->day;
+        // $year = Carbon::now()->year;
+
+        // $cadena = $day . '/' . $mes . '/' . $year;
+
+        // return $cadena;
+
+        $year = Carbon::now()->year;
+        $dob = Carbon::parse($this->dob);
+
+        return Carbon::parse($year . '-'.$dob->format('m-d'))->diffForHumans();
+
+    }
+
+    
 
 
 }

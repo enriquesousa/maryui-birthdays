@@ -47,7 +47,9 @@ class ShowPosts extends Component
         return [
             ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
             ['key' => 'name', 'label' => 'Name', 'class' => 'w-64'],
-            ['key' => 'age', 'label' => 'Age', 'class' => 'w-20'],
+            ['key' => 'nacimiento', 'label' => 'Fecha de Nacimiento', 'class' => 'w-20'],
+            ['key' => 'edad', 'label' => 'Edad', 'class' => 'w-20'],
+            ['key' => 'proximo', 'label' => 'Proximo Cumpleaños', 'class' => 'w-64'],
             ['key' => 'email', 'label' => 'E-mail', 'sortable' => false],
         ];
     }

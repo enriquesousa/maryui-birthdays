@@ -1,6 +1,16 @@
 {
 	"files": [
 		{
+			"path": "resources/views/livewire/show-posts.blade.php",
+			"bookmarks": [
+				{
+					"line": 23,
+					"column": 35,
+					"label": "usar () para mostrar retorno del metodo del modelo"
+				}
+			]
+		},
+		{
 			"path": "package.json",
 			"bookmarks": [
 				{
